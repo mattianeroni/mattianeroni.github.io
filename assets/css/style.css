@@ -203,6 +203,16 @@ main {
   padding-left: 190px;
 }
 
+@keyframes main {
+  from {
+    background-position: 0 0;
+  }
+/*use negative width if you want it to flow right to left else and positive for left to right*/
+  to {
+    background-position: -10000px 0;
+  }
+}
+
 dl {
   margin-top: 0.5rem;
 }
