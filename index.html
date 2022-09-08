@@ -491,7 +491,7 @@
       <div class="container">
         <div class="row">
 
-
+          <div class="card">
           <canvas width="400" height="400" id="game"></canvas>
           <script>
           var canvas = document.getElementById('game');
@@ -564,6 +564,13 @@
             if (snake.cells.length > snake.maxCells) {
               snake.cells.pop();
             }
+
+            // draw background 
+            // Add behind elements.
+            context.globalCompositeOperation = 'destination-over';
+            // Now draw!
+            context.fillStyle = "blue";
+            context.fillRect(0, 0, canvas.width, canvas.height);
 
             // draw apple
             context.fillStyle = 'red';
@@ -638,7 +645,7 @@
           </script>
 
 
-
+          </div>
 
         </div>
       </div>
