@@ -368,6 +368,10 @@ h3 {
   margin-bottom: 60px;
 }
 
+.card .game {
+  width: 1000px
+}
+
 .card .role {
   font-size: 1.25rem;
   position: absolute;
