@@ -543,7 +543,7 @@ small {
 /* main .teal-text */
 
 .teal-text {
-  color: #336699 !important; /*  #008073 !important; */
+  color: #008073 !important;
 }
 
 /* .teal-text {
@@ -553,7 +553,7 @@ small {
 /* .teal */
 
 .teal {
-  background-color: #336699 !important; /*  #008073 !important; */
+  background-color: #008073 !important; 
 }
 
 /* .teal {
