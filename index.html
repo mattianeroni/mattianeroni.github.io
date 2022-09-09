@@ -1254,9 +1254,9 @@
 
             // get random whole numbers in a specific range
             // @see https://stackoverflow.com/a/1527820/2124254
-            function getRandomInt(min, max) {
+            function getRandomPosition(min, max, step) {
               let rnd = Math.floor(Math.random() * (max - min)) + min;
-              let rest = rnd % grid;
+              let rest = rnd % step;
               return rnd - rest;
             }
 
@@ -1319,12 +1319,12 @@
                 context.fillRect(cell.x, cell.y, grid-1, grid-1);  
 
                 // snake ate apple
-                if (cell.x === apple.x && cell.y === apple.y) {
+                if ( (cell.x >= apple.x - 1 || cell.x <= apple.x + 1)  && (cell.y >= apple.y - 1 || cell.y <= apple.y + 1) ) {
                   snake.maxCells++;
 
-                  // canvas is 400x400 which is 25x25 grids 
-                  apple.x = getRandomInt(0, 25) * grid;
-                  apple.y = getRandomInt(0, 25) * grid;
+                  
+                  apple.x = getRandomPosition(0, canvas.width - grid, grid);
+                  apple.y = getRandomPosition(0, canvas.height - grid, grid);
                 }
 
                 // check collision with all cells after this one (modified bubble sort)
@@ -1339,8 +1339,8 @@
                     snake.dx = grid;
                     snake.dy = 0;
 
-                    apple.x = getRandomInt(0, 25) * grid;
-                    apple.y = getRandomInt(0, 25) * grid;
+                    apple.x = getRandomPosition(0, canvas.width - grid, grid);
+                    apple.y = getRandomPosition(0, canvas.height - grid, grid);
                   }
                 }
               });
