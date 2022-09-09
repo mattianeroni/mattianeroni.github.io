@@ -1319,7 +1319,7 @@
                 context.fillRect(cell.x, cell.y, grid-1, grid-1);  
 
                 // snake ate apple
-                if ( (cell.x >= apple.x - 1 && cell.x <= apple.x + 1)  && (cell.y >= apple.y - 1 && cell.y <= apple.y + 1) ) {
+                if ( cell.x === apple.x  && cell.y === apple.y) {
                   snake.maxCells++;
 
                   
