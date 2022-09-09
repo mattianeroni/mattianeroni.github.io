@@ -252,7 +252,7 @@
           
           I have over <strong>5 years of experience</strong> in algorithms development, technical consulting, project management, logistics, supply chain, operations research, machine learning, 
           
-          web applications development. I toke part to more than <strong>15 collaborations with different companies</strong> and approximately 25 scientific publications. <br><br>
+          web applications development. I took part to more than <strong>15 collaborations with different companies</strong> and approximately 25 scientific publications. <br><br>
           
           I have a <strong>high willingness to learn and desire to constantly prove myself carrying out more and more challenging tasks</strong>. I'm interested in working with people who are honest, 
           
@@ -1255,7 +1255,9 @@
             // get random whole numbers in a specific range
             // @see https://stackoverflow.com/a/1527820/2124254
             function getRandomInt(min, max) {
-              return Math.floor(Math.random() * (max - min)) + min;
+              let rnd = Math.floor(Math.random() * (max - min)) + min;
+              let rest = rnd % grid;
+              return rnd - rest;
             }
 
             // game loop
